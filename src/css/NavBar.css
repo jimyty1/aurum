@@ -3,13 +3,14 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: #fff;
+    background-color: white;
     position: relative;
+    color: var(--color-jet-black);
 }
 
 .logo-wrapper {
     height: 80px;
-    width: 340px;
+    width: 320px;
     position: relative;
     overflow: hidden;
 }
@@ -35,7 +36,8 @@
 
 .nav-links a.active,
 .nav-links a:hover {
-    background-color: var(--color-red);
+    background-color: var(--color-red-2028);
+    color: white;
 }
 
 /* Hamburger Icon */
@@ -50,7 +52,7 @@
 .hamburger .bar {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: var(--color-jet-black);
     border-radius: 2px;
 }
 
@@ -60,7 +62,7 @@
         position: absolute;
         top: 100%;
         right: 0;
-        background-color: var(--color-burgundy);
+        background-color: white;
         flex-direction: column;
         width: 200px;
         padding: 1rem;
