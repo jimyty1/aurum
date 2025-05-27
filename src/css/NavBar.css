@@ -3,6 +3,7 @@
     flex-direction: column;        /* Stack nav and logo vertically */
     align-items: center;           /* Center logo and links horizontally */
     padding: 1rem 2rem;
+    height: 60px;
 }
 
 .nav-links {
