@@ -1,80 +1,32 @@
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    position: relative;
-    color: var(--color-jet-black);
 }
-
 .logo-wrapper {
     height: 80px;
     width: 320px;
-    position: relative;
-    overflow: hidden;
+    position: relative; /* So absolutely positioned children stay within */
+    overflow: hidden;    /* Hides anything that spills out */
 }
 
-.logo {
+.navbar .logo {
     object-fit: contain;
     overflow: hidden;
-}
 
-/* Nav Links */
-.nav-links {
+}
+.navbar .nav-links {
     list-style: none;
     display: flex;
     gap: 1.5rem;
 }
-
-.nav-links a {
+.navbar .nav-links a {
     padding: 0.5rem;
     border-radius: 4px;
-    text-decoration: none;
-    color: var(--color-jet-black);
 }
-
-.nav-links a.active,
-.nav-links a:hover {
+.navbar .nav-links a.active,
+.navbar .nav-links a:hover {
     background-color: var(--color-red);
-    color: white;
-}
-
-/* Hamburger Icon */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-jet-black);
-    border-radius: 2px;
-}
-
-/* Mobile Styles */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        flex-direction: column;
-        width: 200px;
-        padding: 1rem;
-        display: none;
-        border-radius: 0 0 8px 8px;
-    }
-
-    .nav-links.open {
-        z-index: 10000;
-        display: flex;
-        background: white;
-    }
-
-    .hamburger {
-        display: flex;
-    }
 }
