@@ -41,8 +41,7 @@ export default function GarmentPage() {
                 value={bid}
                 onChange={(e) => setBid(e.target.value)}
               />
-              <br/>
-              <button onClick={() => alert(`Bid placed: $${bid}`)}>Place Bid</button>
+              <button style={{marginTop:'10px'}}onClick={() => alert(`Bid placed: $${bid}`)}>Place Bid</button>
             </div>
           </div>
         </div>
