@@ -7,6 +7,12 @@ import logo from '../assets/logo new copy.png'
 export default function Navbar() {
   return (
     <nav className="navbar">
+      <ul className="nav-links">
+        <li><NavLink to="/shop">Shop</NavLink></li>
+        <li><NavLink to="/Journal">Journal</NavLink></li>
+        <li><NavLink to="/profile">Profile</NavLink></li>
+        <li><NavLink to="/login">Log In</NavLink></li>
+      </ul>
       <Link to={'/'}>
         <div className='logo-wrapper'>
           <img
@@ -21,13 +27,6 @@ export default function Navbar() {
           />
         </div>
       </Link>
-
-      <ul className="nav-links">
-        <li><NavLink to="/shop">Shop</NavLink></li>
-        <li><NavLink to="/Journal">Journal</NavLink></li>
-        <li><NavLink to="/profile">Profile</NavLink></li>
-        <li><NavLink to="/login">Log In</NavLink></li>
-      </ul>
     </nav>
   );
 }
