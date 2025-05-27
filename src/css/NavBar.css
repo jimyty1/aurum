@@ -1,0 +1,32 @@
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+.logo-wrapper {
+    height: 80px;
+    width: 320px;
+    position: relative; /* So absolutely positioned children stay within */
+    overflow: hidden;    /* Hides anything that spills out */
+}
+
+.navbar .logo {
+    object-fit: contain;
+    overflow: hidden;
+
+}
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.navbar .nav-links a {
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+.navbar .nav-links a.active,
+.navbar .nav-links a:hover {
+    background-color: var(--color-red);
+}

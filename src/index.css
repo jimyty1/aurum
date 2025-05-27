@@ -6,8 +6,46 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+  font-family: 'NeueHaasL';
+  src: url('./assets/fonts/NeueHaasDisplayLight.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NeueHaasM';
+  src: url('./assets/fonts/NeueHaasDisplayMediu.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PPMond';
+  src: url('./assets/fonts/ppmondwest-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+             :root {
+               --color-burgundy: #5D3333;
+               --color-jet-black: #292929;
+               --color-red: #D94523;
+               --color-blue: #78A9DB;
+               --font-body: 'NeueHaasL';
+               --font-heading: 'NeueHaasM';
+               --font-quotes: 'PPMond';
+             }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: #fff;
+  color: var(--color-jet-black);
+}
+
+a { text-decoration: none; color: var(--color-jet-black); }
+
+.app-container { padding: 2rem; }
