@@ -9,7 +9,6 @@ import ProfilePage from './pages/ProfilePage';
 import ShopPage from './pages/ShopPage';
 import './App.css';
 import JournalPage from "./pages/JournalPage";
-import GarmentPage from "./pages/GarmentPage.js";
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/Journal" element={<JournalPage />} />
-          <Route path="/garment/:id" element={<GarmentPage />} />
         </Routes>
       </div>
     </Router>
