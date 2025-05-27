@@ -1,0 +1,56 @@
+.garment-detail-page {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.garment-detail-content {
+    display: flex;
+    gap: 2rem;
+    max-width: 1000px;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Makes it responsive on small screens */
+}
+
+.garment-detail-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.garment-detail-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.description {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.buy-button,
+.bid-section button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-blue);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.bid-section input {
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}

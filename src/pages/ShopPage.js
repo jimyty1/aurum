@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../css/ShopPage.css';
+import {Link} from "react-router-dom";
 
 // Import all images from clothing folder
 const importAll = (r) => {
@@ -40,16 +41,13 @@ export default function ShopPage() {
       <h2>Shop Our Collection</h2>
       <div className="garment-grid">
         {Object.entries(garments).map(([key, imgs]) =>
-          imgs.length === 1 ? (
-            <img
-              key={imgs[0].name}
-              src={imgs[0].src}
-              alt={`Garment ${key}`}
-              className="garment-image"
-            />
-          ) : (
-            <Carousel key={key} images={imgs.map((i) => i.src)} />
-          )
+          <Link to={`/garment/${key}`} key={key}>
+            {imgs.length === 1 ? (
+              <img src={imgs[0].src} alt={`Garment ${key}`} className="garment-image" />
+            ) : (
+              <Carousel images={imgs.map((i) => i.src)} />
+            )}
+          </Link>
         )}
       </div>
     </div>
