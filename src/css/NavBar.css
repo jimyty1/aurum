@@ -69,6 +69,7 @@
     }
 
     .nav-links.open {
+        z-index: 10000;
         display: flex;
         background: white;
     }
