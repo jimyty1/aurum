@@ -75,6 +75,7 @@ function Carousel({ images }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
+      <br/>
       <img src={images[index]} alt="Garment View" className="garment-image" />
     </div>
   );
