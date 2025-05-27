@@ -15,7 +15,7 @@ export default function Navbar() {
           <img
             className="logo"
             src={logo}
-            style={{ height: '200px', position: 'absolute', left: '0px' }}
+            style={{ height: '200px', position: 'absolute', left: '-20px' }}
             alt="logo"
           />
         </div>
