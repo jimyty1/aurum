@@ -28,7 +28,7 @@ export default function GarmentPage() {
         <img src={images[index].src} alt={`Garment ${id}`} className="garment-detail-image" />
 
         <div className="garment-detail-info">
-          <h2 className='id-gar'>Garment #{id}</h2>
+          <h2>Garment #{id}</h2>
           <p className="description">{descriptions[id]}</p>
 
           <div className="actions">

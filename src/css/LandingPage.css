@@ -18,3 +18,12 @@
 .preview-image:hover {
     transform: scale(1.05);
 }
+.banner-img {
+    width: 100%;
+    max-width: 1200px;     /* or whatever width you want */
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    object-fit: contain;
+    border-radius: 8px;     /* optional */
+}
