@@ -30,6 +30,7 @@ export default function LandingPage() {
         </div>
       </div>
 
+
       <div className="three-image-grid">
         <img src={images[8]} alt="Image 8" className="grid-image img-left" />
         <img src={images[9]} alt="Image 9" className="grid-image img-top-right" />
