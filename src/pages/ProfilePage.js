@@ -49,7 +49,7 @@ export default function ProfilePage() {
 
   return (
     <div className="profile-page">
-      <aside className="profile-nav">
+      <aside className="profile-nav" style={{marginTop:'30px'}}>
         <ul>
           <li onClick={() => setActiveTab('orders')} className={activeTab === 'orders' ? 'active' : ''}>Previous Orders</li>
           <li onClick={() => setActiveTab('returns')} className={activeTab === 'returns' ? 'active' : ''}>Returns</li>
