@@ -9,7 +9,9 @@ export default function GarmentPage() {
   const { id } = useParams();
   const [index, setIndex] = useState(0);
   const [bid, setBid] = useState('');
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   // Get images matching this garment ID
   const images = allImages
     .filter(img => img.name.startsWith(`(${id}`)) // (2), (2.1), etc.

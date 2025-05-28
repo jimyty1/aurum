@@ -36,6 +36,9 @@ const groupByGarment = (images) => {
 const garments = groupByGarment(allImages);
 
 export default function ShopPage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <div className="shop-page">
       <h2>Shop Our Collection</h2>

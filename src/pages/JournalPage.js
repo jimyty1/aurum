@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../css/JournalPage.css';
 import { journalImages } from '../utils/imageLoader';
 
 export default function JournalPage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <div className="journal-page">
 

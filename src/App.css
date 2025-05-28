@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+/* Ensure full height and flex column layout */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* The main page content grows to fill space */
+.app-container {
+  flex: 1;
+}

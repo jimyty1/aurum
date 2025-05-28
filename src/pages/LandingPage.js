@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../css/LandingPage.css';
 import {
   previewImages,
@@ -10,6 +10,9 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <div>
       <div className='text-top'>

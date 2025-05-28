@@ -16,23 +16,25 @@ import JournalDetailPage from "./pages/JournalDetailPage";
 function App() {
   return (
     <Router>
-      <Navbar />
-      <div className="app-container">
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/shop" element={<ShopPage />} />
-          <Route path="/Journal" element={<JournalPage />} />
-          <Route path="/garment/:id" element={<GarmentPage />} />
-          <Route path="/journal/:id" element={<JournalDetailPage />} />
-
-        </Routes>
+      <div className="app-wrapper">
+        <Navbar />
+        <div className="app-container">
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/Journal" element={<JournalPage />} />
+            <Route path="/garment/:id" element={<GarmentPage />} />
+            <Route path="/journal/:id" element={<JournalDetailPage />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 }
+
 
 export default App;
 

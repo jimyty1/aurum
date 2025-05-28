@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import '../css/ProfilePage.css';
 
 export default function ProfilePage() {
   const [activeTab, setActiveTab] = useState('orders');
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   const renderContent = () => {
     switch (activeTab) {
       case 'orders':
