@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import '../css/JournalDetailPage.css';
 import {journalImages, journalDescriptions, allImages} from '../utils/imageLoader';
 
 export default function JournalDetailPage() {
   const { id } = useParams();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   // Find image and index based on filename match
   const index = allImages.findIndex((img) => {

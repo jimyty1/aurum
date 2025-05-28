@@ -21,6 +21,19 @@ export default function LandingPage() {
           <div key={col} className={`grid-col ${col}`}>
             {[0, 1].map(j => {
               const src = grid1Images[i * 2 + j];
+
+              // Add text under bottom-right image
+              if (i === 2 && j === 1) {
+                return (
+                  <div key={j} className="image-with-caption">
+                    <Link to={`/journal/${src.split('/').pop()}`}>
+                      <img src={src} alt={`Grid1-${i * 2 + j}`} className="grid-img" />
+                    </Link>
+                    <div className="grid-caption">Crafted to Define Legacy</div>
+                  </div>
+                );
+              }
+
               return (
                 <Link to={`/journal/${src.split('/').pop()}`} key={j}>
                   <img src={src} alt={`Grid1-${i * 2 + j}`} className="grid-img" />
@@ -30,6 +43,7 @@ export default function LandingPage() {
           </div>
         ))}
       </div>
+
 
       <div className="banner-section">
         <Link to={`/journal/${bannerImage.split('/').pop()}`}>
