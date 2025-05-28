@@ -12,7 +12,9 @@ export default function LandingPage() {
 
   return (
     <div>
-      <div style={{marginLeft:'20px'}}>Discover our curated collection inspired by drama, contrast, and sculptural form.</div>
+      <div className='text-top'>
+        Discover our curated collection inspired by drama, contrast, and sculptural form.
+      </div>
 
       <div className="side-by-side-preview">
         {previewImages.map((src, index) => (

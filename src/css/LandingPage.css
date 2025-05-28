@@ -32,6 +32,10 @@
     display: block;
     object-fit: cover;
 }
+.text-top{
+    margin-left: 30px;
+    font-size: 24px;
+}
 
 .quote-overlay {
     position: absolute;
