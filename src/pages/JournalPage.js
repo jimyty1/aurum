@@ -5,7 +5,6 @@ import { journalImages } from '../utils/imageLoader';
 export default function JournalPage() {
   return (
     <div className="journal-page">
-      <h2>Journal</h2>
 
       <div className="journal-section left-image">
         <img src={journalImages[0]} alt="Journal Visual 1" className="journal-img" />
