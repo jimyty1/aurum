@@ -1,0 +1,40 @@
+.profile-page {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.profile-nav {
+    min-width: 220px;
+    border-right: 1px solid #ccc;
+}
+
+.profile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-nav li {
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--color-jet-black);
+}
+
+.profile-nav li:hover {
+    color: var(--color-red);
+}
+
+.profile-nav li.active {
+    color: var(--color-red);
+    font-weight: bold;
+}
+
+.profile-content {
+    flex: 1;
+    padding: 1rem;
+    background-color: #fdfdfd;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}

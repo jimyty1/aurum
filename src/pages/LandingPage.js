@@ -35,13 +35,12 @@ export default function LandingPage() {
         <img src={images[9]} alt="Image 9" className="grid-image img-top-right" />
         <img src={images[10]} alt="Image 10" className="grid-image img-bottom-right" />
       </div>
-
-
-      <div className="landing-container">
-        {remainingImages.map((src, i) => (
-          <img key={i} src={src} className="landing-image" />
-        ))}
+      <div className="three-image-grid">
+        <img src={images[5]} alt="Image 8" className="grid-image img-left" />
+        <img src={images[6]} alt="Image 9" className="grid-image img-top-right" />
+        <img src={images[7]} alt="Image 10" className="grid-image img-bottom-right" />
       </div>
+
 
     </div>
   );
