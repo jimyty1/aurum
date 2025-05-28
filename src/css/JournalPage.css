@@ -1,4 +1,56 @@
-.text-journal{
-    font-size: 24px;
-    font-weight: bold;
+.journal-page {
+    padding: 2rem;
+}
+
+.journal-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 15px;
+    color: white;
+}
+
+.journal-section.left-image {
+    flex-direction: row;
+    background: var(--color-blue);
+}
+
+.journal-section.right-image {
+    background: var(--color-burgundy);
+}
+.journal-section.right-image p {
+    margin-left: 20px;
+}
+
+.journal-img {
+    width: 40%;
+    max-width: 400px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.journal-section p {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.text-journal {
+    font-size: 20px;
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+    .journal-section.left-image,
+    .journal-section.right-image {
+        flex-direction: column;
+    }
+
+    .journal-img {
+        width: 100%;
+    }
+
+    .journal-section p {
+        text-align: justify;
+    }
 }
