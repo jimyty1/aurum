@@ -15,25 +15,6 @@ export default function LandingPage() {
       <div className='text-top'>
         Discover our curated collection inspired by drama, contrast, and sculptural form.
       </div>
-
-      <div className="side-by-side-preview">
-        {previewImages.map((src, index) => (
-            <img src={src} alt={`Preview ${index + 1}`} className="preview-image" />
-        ))}
-      </div>
-
-      <div className="banner-section">
-        <Link to={`/journal/${bannerImage.split('/').pop()}`}>
-          <img className="banner-img" src={bannerImage} alt="Banner" />
-        </Link>
-        <div className="quote-overlay">
-          <div className="quote-line">WHERE</div>
-          <div className="quote-line indent">HERITAGE</div>
-          <div className="quote-line">MEETS</div>
-          <div className="quote-line indent">INNOVATION</div>
-        </div>
-      </div>
-
       {/* Grid 1 */}
       <div className="custom-grid-1">
         {['left', 'middle', 'right'].map((col, i) => (
@@ -49,6 +30,19 @@ export default function LandingPage() {
           </div>
         ))}
       </div>
+
+      <div className="banner-section">
+        <Link to={`/journal/${bannerImage.split('/').pop()}`}>
+          <img className="banner-img" src={bannerImage} alt="Banner" />
+        </Link>
+        <div className="quote-overlay">
+          <div className="quote-line">WHERE</div>
+          <div className="quote-line indent">HERITAGE</div>
+          <div className="quote-line">MEETS</div>
+          <div className="quote-line indent">INNOVATION</div>
+        </div>
+      </div>
+
 
       {/* Grid 2 */}
       <div className="custom-grid-2">
