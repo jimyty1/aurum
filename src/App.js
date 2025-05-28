@@ -10,6 +10,7 @@ import ShopPage from './pages/ShopPage';
 import './App.css';
 import JournalPage from "./pages/JournalPage";
 import GarmentPage from "./pages/GarmentPage";
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
 
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }

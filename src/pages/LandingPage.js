@@ -8,7 +8,7 @@ const images = importAll(require.context('../assets/pictures', false, /\.(png|jp
 export default function LandingPage() {
   const previewImages = images.slice(0, 3);
   const largeImage = images[4]
-  const remainingImages = images.slice(5);
+  const remainingImages = images.slice(5,8);
 
   return (
     <div>
@@ -19,18 +19,30 @@ export default function LandingPage() {
           <img key={index} src={src} alt={`Preview ${index + 1}`} className="preview-image" />
         ))}
       </div>
-      <div>
-        <img className='banner-img' src={largeImage}/>
+      <div className="banner-section">
+        <img className="banner-img" src={largeImage} alt="Banner" />
+
+        <div className="quote-overlay">
+          <div className="quote-line">WHERE</div>
+          <div className="quote-line indent">HERITAGE</div>
+          <div className="quote-line">MEETS</div>
+          <div className="quote-line indent">INNOVATION</div>
+        </div>
       </div>
+
+      <div className="three-image-grid">
+        <img src={images[8]} alt="Image 8" className="grid-image img-left" />
+        <img src={images[9]} alt="Image 9" className="grid-image img-top-right" />
+        <img src={images[10]} alt="Image 10" className="grid-image img-bottom-right" />
+      </div>
+
+
       <div className="landing-container">
         {remainingImages.map((src, i) => (
           <img key={i} src={src} className="landing-image" />
         ))}
       </div>
 
-      <Link to="/shop">
-        <button className="cta-button">Enter Shop</button>
-      </Link>
     </div>
   );
 }
