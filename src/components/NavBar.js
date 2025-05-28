@@ -13,10 +13,12 @@ export default function Navbar() {
         <li><NavLink to="/login">Log In</NavLink></li>
       </ul>
 
+      {/* Logo wrapper now split into clickable and visual parts */}
       <div className="logo-wrapper">
-        <Link to="/">
-          <img className="logo" src={logo} alt="logo" />
+        <Link to="/" className="logo-click-area">
+          {/* Empty div or small clickable marker */}
         </Link>
+        <img className="logo" src={logo} alt="logo" />
       </div>
     </nav>
   );
