@@ -6,9 +6,9 @@ const importAll = (r) => r.keys().map(r);
 const images = importAll(require.context('../assets/pictures', false, /\.(png|jpe?g|webp)$/));
 
 export default function LandingPage() {
-  const previewImages = images.slice(0, 3);
-  const largeImage = images[4]
-  const remainingImages = images.slice(5,8);
+  const previewImages = images.slice(2, 5);
+  const largeImage = images[15]
+  const remainingImages = images.slice(9,33);
 
   return (
     <div>
@@ -42,7 +42,11 @@ export default function LandingPage() {
         <img src={images[6]} alt="Image 6" className="grid-image img-top-right" />
         <img src={images[7]} alt="Image 7" className="grid-image img-bottom-right" />
       </div>
-
+      <div className="side-by-side-preview">
+        {remainingImages.map((src, index) => (
+          <img key={index} src={src} alt={`Preview ${index + 1}`} className="preview-image" />
+        ))}
+      </div>
 
     </div>
   );
