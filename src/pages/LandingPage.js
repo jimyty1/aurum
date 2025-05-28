@@ -19,6 +19,8 @@ export default function LandingPage() {
           <img key={index} src={src} alt={`Preview ${index + 1}`} className="preview-image" />
         ))}
       </div>
+
+
       <div className="banner-section">
         <img className="banner-img" src={largeImage} alt="Banner" />
 
@@ -29,7 +31,6 @@ export default function LandingPage() {
           <div className="quote-line indent">INNOVATION</div>
         </div>
       </div>
-
 
       <div className="three-image-grid">
         <img src={images[8]} alt="Image 8" className="grid-image img-left" />
