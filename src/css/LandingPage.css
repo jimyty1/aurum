@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: 2rem 0;
     flex-wrap: wrap;
 }
 
@@ -69,7 +68,23 @@
     gap: 1rem;
     width: 100%;
     max-width: 1200px;
-    margin: 2rem auto;
+    margin-top: 2em;
+}
+.overlay-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: -60%;
+    right: 1%;
+    background: var(--color-burgundy);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 4rem;
+    font-family: PPMond, serif;
 }
 
 .grid-col {

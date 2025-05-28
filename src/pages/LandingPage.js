@@ -43,13 +43,25 @@ export default function LandingPage() {
         </div>
       </div>
 
-
-      {/* Grid 2 */}
+      {/*Grid 2*/}
       <div className="custom-grid-2">
         {['left', 'middle', 'right'].map((col, i) => (
           <div key={col} className={`grid-col ${col}`}>
             {[0, 1].map(j => {
               const src = grid2Images[i * 2 + j];
+
+              // Overlay text only on the second image (bottom of right column)
+              if (col === 'right' && j === 1) {
+                return (
+                  <Link to={`/journal/${src.split('/').pop()}`} key={j}>
+                    <div className="overlay-wrapper">
+                      <img src={src} alt={`Grid2-${i * 2 + j}`} className="grid-img" />
+                      <div className="overlay-text">Auctioneering the future of the past</div>
+                    </div>
+                  </Link>
+                );
+              }
+
               return (
                 <Link to={`/journal/${src.split('/').pop()}`} key={j}>
                   <img src={src} alt={`Grid2-${i * 2 + j}`} className="grid-img" />
