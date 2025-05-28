@@ -34,16 +34,38 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <div className="three-image-grid">
-        <img src={images[8]} alt="Image 8" className="grid-image img-left" />
-        <img src={images[9]} alt="Image 9" className="grid-image img-top-right" />
-        <img src={images[10]} alt="Image 10" className="grid-image img-bottom-right" />
+      {/* Grid 1: 1 left, 2 middle, 2 right */}
+      <div className="custom-grid-1">
+        <div className="grid-col left">
+          <img src={images[8]} alt="Image 8" className="grid-img" />
+          <img src={images[9]} alt="Image 9" className="grid-img" />
+        </div>
+        <div className="grid-col middle">
+          <img src={images[10]} alt="Image 9" className="grid-img" />
+          <img src={images[11]} alt="Image 10" className="grid-img" />
+        </div>
+        <div className="grid-col right">
+          <img src={images[12]} alt="Image 11" className="grid-img" />
+          <img src={images[13]} alt="Image 12" className="grid-img" />
+        </div>
       </div>
-      <div className="three-image-grid">
-        <img src={images[5]} alt="Image 5" className="grid-image img-left" />
-        <img src={images[6]} alt="Image 6" className="grid-image img-top-right" />
-        <img src={images[7]} alt="Image 7" className="grid-image img-bottom-right" />
+
+      {/* Grid 2: 2 left, 2 middle, 1 right */}
+      <div className="custom-grid-2">
+        <div className="grid-col left">
+          <img src={images[14]} alt="Image 13" className="grid-img" />
+          <img src={images[15]} alt="Image 14" className="grid-img" />
+        </div>
+        <div className="grid-col middle">
+          <img src={images[16]} alt="Image 5" className="grid-img" />
+          <img src={images[17]} alt="Image 6" className="grid-img" />
+        </div>
+        <div className="grid-col right">
+          <img src={images[18]} alt="Image 7" className="grid-img" />
+          <img src={images[19]} alt="Image 7" className="grid-img" />
+        </div>
       </div>
+
       <div className="side-by-side-preview">
         {remainingImages.map((src, index) => (
           <img key={index} src={src} alt={`Preview ${index + 1}`} className="preview-image" />
