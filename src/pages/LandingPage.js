@@ -7,6 +7,7 @@ import {
   grid2Images,
   remainingImages,
 } from '../utils/imageLoader';
+import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
   return (
@@ -17,12 +18,14 @@ export default function LandingPage() {
 
       <div className="side-by-side-preview">
         {previewImages.map((src, index) => (
-          <img key={index} src={src} alt={`Preview ${index + 1}`} className="preview-image" />
+            <img src={src} alt={`Preview ${index + 1}`} className="preview-image" />
         ))}
       </div>
 
       <div className="banner-section">
-        <img className="banner-img" src={bannerImage} alt="Banner" />
+        <Link to={`/journal/${bannerImage.split('/').pop()}`}>
+          <img className="banner-img" src={bannerImage} alt="Banner" />
+        </Link>
         <div className="quote-overlay">
           <div className="quote-line">WHERE</div>
           <div className="quote-line indent">HERITAGE</div>
@@ -35,8 +38,14 @@ export default function LandingPage() {
       <div className="custom-grid-1">
         {['left', 'middle', 'right'].map((col, i) => (
           <div key={col} className={`grid-col ${col}`}>
-            <img src={grid1Images[i * 2]} alt={`Grid1-${i * 2}`} className="grid-img" />
-            <img src={grid1Images[i * 2 + 1]} alt={`Grid1-${i * 2 + 1}`} className="grid-img" />
+            {[0, 1].map(j => {
+              const src = grid1Images[i * 2 + j];
+              return (
+                <Link to={`/journal/${src.split('/').pop()}`} key={j}>
+                  <img src={src} alt={`Grid1-${i * 2 + j}`} className="grid-img" />
+                </Link>
+              );
+            })}
           </div>
         ))}
       </div>
@@ -45,15 +54,23 @@ export default function LandingPage() {
       <div className="custom-grid-2">
         {['left', 'middle', 'right'].map((col, i) => (
           <div key={col} className={`grid-col ${col}`}>
-            <img src={grid2Images[i * 2]} alt={`Grid2-${i * 2}`} className="grid-img" />
-            <img src={grid2Images[i * 2 + 1]} alt={`Grid2-${i * 2 + 1}`} className="grid-img" />
+            {[0, 1].map(j => {
+              const src = grid2Images[i * 2 + j];
+              return (
+                <Link to={`/journal/${src.split('/').pop()}`} key={j}>
+                  <img src={src} alt={`Grid2-${i * 2 + j}`} className="grid-img" />
+                </Link>
+              );
+            })}
           </div>
         ))}
       </div>
 
       <div className="side-by-side-preview">
         {remainingImages.map((src, index) => (
-          <img key={index} src={src} alt={`Preview ${index + 1}`} className="preview-image" />
+          <Link to={`/journal/${src.split('/').pop()}`} key={index} className="preview-link">
+            <img src={src} alt={`Preview ${index + 1}`} className="previewJ" />
+          </Link>
         ))}
       </div>
     </div>

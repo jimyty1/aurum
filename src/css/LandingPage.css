@@ -14,6 +14,12 @@
     transition: transform 0.3s ease;
 }
 
+.previewJ{
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
 .preview-image:hover {
     transform: scale(1.05);
 }
@@ -26,6 +32,18 @@
     aspect-ratio: 16 / 9; /* or 4/3 depending on your preference */
     overflow: hidden;
 }
+
+.preview-link {
+    display: block;
+    max-width: 30%;
+}
+
+.preview-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 
 .banner-img {
     width: 100%;
@@ -45,48 +63,46 @@
 .custom-grid-1,
 .custom-grid-2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: stretch;
     gap: 1rem;
-    margin: 3rem auto;
+    width: 100%;
     max-width: 1200px;
-    padding: 0 1rem;
+    margin: 2rem auto;
 }
 
-.custom-grid-1 .grid-col,
-.custom-grid-2 .grid-col {
+.grid-col {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    flex: 1;
+    flex: 1; /* Makes each column equally wide */
 }
+
 
 .grid-img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    display: block;
 }
+
 
 @media (max-width: 768px) {
     .custom-grid-1,
     .custom-grid-2 {
         flex-direction: column;
-        align-items: center;
     }
 
-    .custom-grid-1 .grid-col,
-    .custom-grid-2 .grid-col {
+    .grid-col {
         width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
     }
 
     .grid-img {
-        width: 45%;
-        margin: 0.5rem;
+        width: 100%;
+        height: auto;
     }
 }
+
 
 
 .text-top{

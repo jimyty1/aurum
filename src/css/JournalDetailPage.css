@@ -1,0 +1,18 @@
+.journal-detail-page {
+    padding: 2rem;
+    text-align: center;
+}
+
+.journal-detail-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.journal-detail-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
