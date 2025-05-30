@@ -139,10 +139,11 @@
 
 
 
-.text-top{
-    margin-left: 30px;
+.text-top {
     font-size: 24px;
+    text-align: center;
 }
+
 
 .quote-overlay {
     position: absolute;
