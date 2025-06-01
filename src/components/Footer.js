@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Footer.css';
-import logo from '../assets/logo new copy.png';
+import logo from '../assets/logo new.png';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -28,6 +28,7 @@ export default function Footer() {
           <Link to="/journal">Journal</Link>
           <Link to="/profile">Profile</Link>
           <Link to="/login">Log In</Link>
+          <Link to={'about'}>About</Link>
         </div>
 
         {/* Right: Newsletter Sign-Up */}

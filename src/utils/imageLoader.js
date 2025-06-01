@@ -1,5 +1,7 @@
+import atrium from '../assets/atrium.webp'
 const importAll = (r) => r.keys().map(r);
 export const allImages = importAll(require.context('../assets/pictures', false, /\.(png|jpe?g|webp)$/));
+
 
 export const previewImages = allImages.slice(2, 5);
 export const bannerImage = allImages[25];
@@ -14,7 +16,7 @@ export const remainingImages = [
   allImages[5],
 ];
 
-export const journalImages = allImages.slice(36, 39);
+export const journalImages = [...allImages.slice(36, 39), atrium];
 
 
 export const journalDescriptions = [

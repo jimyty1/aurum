@@ -37,13 +37,16 @@
     flex-direction: column;
     gap: 1rem;
 }
+.further-description {
+    white-space: pre-line;
+}
+
 
 .buy-button,
 .bid-section button {
     padding: 0.75rem 1.5rem;
     background-color: var(--color-blue);
     border: none;
-    border-radius: 8px;
     color: white;
     cursor: pointer;
 }
