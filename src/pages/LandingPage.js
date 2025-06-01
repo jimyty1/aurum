@@ -53,10 +53,10 @@ export default function LandingPage() {
           <img className="banner-img" src={bannerImage} alt="Banner" />
         </Link>
         <div className="quote-overlay">
-          <div className="quote-line">WHERE</div>
-          <div className="quote-line indent">HERITAGE</div>
-          <div className="quote-line">MEETS</div>
-          <div className="quote-line indent">INNOVATION</div>
+          <div className="quote-line">AUCTIONEERING</div>
+          <div className="quote-line indent">THE FUTURE OF</div>
+          <div className="quote-line">THE PAST</div>
+          <div className="quote-line indent"> </div>
         </div>
       </div>
 

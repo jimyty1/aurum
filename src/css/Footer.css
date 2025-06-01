@@ -35,7 +35,7 @@
 
 .footer-links a {
     text-decoration: none;
-    color: var(--color-jet-black);
+    color: white;
     font-weight: 1000;
 }
 
@@ -55,7 +55,7 @@
     margin-right: .5rem;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--color-jet-black);
+    color: white;
     text-align: right;
 }
 
@@ -69,6 +69,7 @@
     font-size: 0.9rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    height: 8px;
 }
 
 .footer-newsletter .newsletter-button {
@@ -92,6 +93,7 @@
     text-align: center;
     width: 100%;
     margin-top: 1.5rem;
+    color: white;
 }
 
 /* Responsive tweaks: keep the same stacking but adjust spacing */
