@@ -16,7 +16,7 @@ export default function LandingPage() {
   return (
     <div>
       <div className='text-top'>
-        Discover our curated collection inspired by drama, contrast, and sculptural form.
+        Where rare couture, jewelry, and design objects from private hands to discerning collectors worldwide
       </div>
       {/* Grid 1 */}
       <div className="custom-grid-1">

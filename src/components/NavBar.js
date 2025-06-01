@@ -7,10 +7,10 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <ul className="nav-links">
-        <li><NavLink to="/shop">Shop</NavLink></li>
-        <li><NavLink to="/Journal">Journal</NavLink></li>
-        <li><NavLink to="/profile">Profile</NavLink></li>
-        <li><NavLink to="/login">Log In</NavLink></li>
+        <li><NavLink to="/shop">AUCTIONS</NavLink></li>
+        <li><NavLink to="/Journal">JOURNAL</NavLink></li>
+        <li><NavLink to="/profile">PROFILE</NavLink></li>
+        <li><NavLink to="/login">LOG IN</NavLink></li>
       </ul>
 
       {/* Logo wrapper now split into clickable and visual parts */}
