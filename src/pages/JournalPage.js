@@ -7,6 +7,7 @@ return(
     <h1 className='jtitle'>Journal</h1>
     <JournalGrid i = {0}/>
     <JournalGrid i={3}/>
+    <div></div>
   </div>
 )
 }
