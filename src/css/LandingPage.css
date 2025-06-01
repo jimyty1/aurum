@@ -50,6 +50,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    margin-top: 10px;
 }
 
 .banner-img {
@@ -82,11 +83,11 @@
     position: absolute;
     bottom: -60%;
     right: 1%;
-    background: var(--color-burgundy);
-    color: white;
+    color: var(--color-burgundy);
     padding: 0.5rem 1rem;
     font-size: 4rem;
     font-family: PPMond, serif;
+    font-weight: bold;
 }
 .image-with-caption {
     display: flex;
@@ -97,11 +98,11 @@
 .grid-caption {
     margin-top: .2rem;
     font-size: 2.1rem;
-    color: var(--color-jet-black);
     text-align: center;
     padding: .7em;
-    background: var(--color-blue);
+    color: var(--color-blue);
     font-family: PPMond;
+    font-weight: bold;
 }
 
 

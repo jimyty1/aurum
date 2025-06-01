@@ -2,27 +2,35 @@
     background-color: var(--color-burgundy);
     padding: 2rem 1rem;
     border-top: 1px solid #ccc;
-    text-align: center;
     color: var(--color-jet-black);
     font-family: inherit;
 }
 
+/* Stack logo, links, then newsletter */
 .footer-content {
     max-width: 900px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center logo and links */
 }
 
+/* 1. Logo on its own line */
+.footer-logo {
+    margin-bottom: 1.5rem;
+}
 .footer-logo img {
     height: 60px;
     object-fit: contain;
 }
 
+/* 2. Links on the next line, centered */
 .footer-links {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .footer-links a {
@@ -35,7 +43,75 @@
     color: var(--color-red);
 }
 
+/* 3. Newsletter form on its own line but aligned to the right edge of .footer-content */
+.footer-newsletter {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.footer-newsletter .newsletter-title {
+    margin-bottom: 0.5rem;
+    margin-right: .5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-jet-black);
+    text-align: right;
+}
+
+.footer-newsletter .newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer-newsletter .newsletter-input {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.footer-newsletter .newsletter-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background-color: var(--color-red);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-newsletter .newsletter-button:hover {
+    background-color: #b22323;
+}
+
+/* 4. Footer bottom line (copyright) centered below everything */
 .footer-copy {
     font-size: 0.9rem;
     opacity: 0.8;
+    text-align: center;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+/* Responsive tweaks: keep the same stacking but adjust spacing */
+@media (max-width: 768px) {
+    .footer-links {
+        gap: 1rem;
+    }
+
+    .footer-newsletter {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-newsletter .newsletter-title {
+        text-align: center;
+    }
+
+    .footer-newsletter .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
 }
