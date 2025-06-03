@@ -41,6 +41,10 @@
     white-space: pre-line;
 }
 
+.property{
+    font-weight: bold;
+    font-family: var(--font-heading);
+}
 
 .buy-button,
 .bid-section button {

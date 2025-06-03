@@ -43,6 +43,19 @@ export default function GarmentPage() {
       ? rawFurther
       : null;
 
+  const propertyOf = `${id}.0`;
+  const rawProperty = descriptions[propertyOf];
+  const property =
+    typeof rawProperty === 'string' && rawProperty.trim().length > 0
+      ? rawProperty
+      : null;
+  const estimate = `${id}.3`;
+  const rawEstimate = descriptions[estimate];
+  const estim =
+    typeof rawEstimate === 'string' && rawEstimate.trim().length > 0
+      ? rawEstimate
+      : null;
+
   return (
     <div className="garment-detail-page">
       <div className="garment-detail-content">
@@ -56,6 +69,9 @@ export default function GarmentPage() {
 
         <div className="garment-detail-info">
           {/* Render title via dedicated component */}
+          {property && (
+            <p className="property">{property}</p>
+          )}
           <GarmentTitle id={id} />
 
           {/* Always render main description if it exists */}
@@ -74,7 +90,7 @@ export default function GarmentPage() {
             <div className="bid-section">
               <input
                 type="number"
-                placeholder="Enter your bid"
+                placeholder={`${estim}`}
                 value={bid}
                 onChange={e => setBid(e.target.value)}
               />
@@ -84,6 +100,13 @@ export default function GarmentPage() {
               >
                 Place Bid
               </button>
+              <div style={{marginTop:'10px', fontWeight:'bold'}}>
+                The Aurum Assurance:
+              </div>
+              <div>
+                Expert Authentication, Blockchain-Verified Provenance, White-Glove Delivery, 48-Hour Bid Withdrawal Option
+                Learn more
+              </div>
             </div>
           </div>
         </div>
