@@ -67,14 +67,32 @@ export default function LandingPage() {
             {[0, 1].map(j => {
               const src = grid2Images[i * 2 + j];
 
-              // Overlay text only on the second image (bottom of right column)
               if (col === 'right' && j === 1) {
                 return (
                   <Link to={`/journal/${src.split('/').pop()}`} key={j}>
                     <div className="overlay-wrapper">
-                      <img src={src} alt={`Grid2-${i * 2 + j}`} className="grid-img" />
-                      <div className="overlay-text">Auctioneering the future of the past</div>
+                      <img
+                        src={src}
+                        alt={`Grid2-${i * 2 + j}`}
+                        className="grid-img"
+                      />
+
+                      <div className="overlay-section">
+                        <div className="overlay-title">LIMITED BUY NOW</div>
+                        <div className="overlay-description">
+                          Limited pieces available for immediate purchase on the Buy Now feature
+                        </div>
+                      </div>
+
+                      <div className="overlay-section">
+                        <div className="overlay-title">NEW DROP</div>
+                        <div className="overlay-description">
+                          Check out our new curated lots and special drops available. Live
+                          countdowns and updates on the website and social media
+                        </div>
+                      </div>
                     </div>
+
                   </Link>
                 );
               }
