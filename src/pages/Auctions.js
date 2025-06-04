@@ -69,14 +69,6 @@ export default function Auctions() {
               </div>
               <div className="location">Location: {auction.location}</div>
             </div>
-
-            {/* Link to a dedicated auction page */}
-            <Link
-              to={`/auctions/${auction.id}`}
-              className="details-link"
-            >
-              View Full Details →
-            </Link>
           </div>
         </div>
         </Link>

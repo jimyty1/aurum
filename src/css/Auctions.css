@@ -24,7 +24,7 @@
   display: flex;
   width: 80%;           /* or any fixed px value if you prefer */
   max-width: 1000px;    /* optional max */
-  background: #fff;
+  background: var(--color-blue);
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-left: auto;
@@ -50,7 +50,7 @@
 /* Right: details container takes the other half */
 .auction-details {
   flex: 0 0 50%;
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: 5%;
   padding: 16px;
 }
@@ -59,26 +59,27 @@
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 8px;
-  color: #333;
+  color: var(--color-jet-black);
 }
 
 .auction-code {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 600;
-  color: #555;
+  color: var(--color-jet-black);
   margin-bottom: 6px;
 }
 
 .auction-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #222;
+  font-size: 38px;
+  font-weight: bold;
+  width: fit-content;
+  color: var(--color-jet-black);
   margin-bottom: 12px;
 }
 
 .auction-additional {
   margin-bottom: 14px;
-  color: #444;
+  color: var(--color-jet-black);
   font-size: 24px;
 }
 
@@ -102,7 +103,7 @@
   display: inline-block;
   margin-top: 10px;
   font-weight: 600;
-  color: #1f4fdb;
+  color: var(--color-jet-black);
   text-decoration: none;
 }
 
