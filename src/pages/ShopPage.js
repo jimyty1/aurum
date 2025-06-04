@@ -41,7 +41,7 @@ export default function ShopPage() {
   }, []);
   return (
     <div className="shop-page">
-      <h2>Shop Our Collection</h2>
+      <h2>Our Buy Now Collection</h2>
       <div className="garment-grid">
         {Object.entries(garments).map(([key, imgs]) =>
           <Link to={`/garment/${key}`} key={key}>

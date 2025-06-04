@@ -7,7 +7,8 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <ul className="nav-links">
-        <li><NavLink to="/shop">AUCTIONS</NavLink></li>
+        <li><NavLink to="/shop">BUY NOW</NavLink></li>
+        <li><NavLink to="/auctions">AUCTIONS</NavLink></li>
         <li><NavLink to="/Journal">JOURNAL</NavLink></li>
         <li><NavLink to="/profile">PROFILE</NavLink></li>
         <li><NavLink to="/login">LOG IN</NavLink></li>

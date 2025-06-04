@@ -32,7 +32,7 @@ export default function LandingPage() {
                     <Link to={`/journal/${src.split('/').pop()}`}>
                       <img src={src} alt={`Grid1-${i * 2 + j}`} className="grid-img" />
                     </Link>
-                    <div className="grid-caption">Crafted to Define Legacy</div>
+                    <div className="grid-caption"></div>
                   </div>
                 );
               }

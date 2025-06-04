@@ -13,6 +13,7 @@ import GarmentPage from "./pages/GarmentPage";
 import Footer from './components/Footer';
 import JournalDetailPage from "./pages/JournalDetailPage";
 import JournalPage from "./pages/JournalPage";
+import Auctions from "./pages/Auctions";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/Journal" element={<JournalPage />} />
             <Route path="/About" element={<About />} />
+            <Route path="/auctions" element={<Auctions />} />
             <Route path="/garment/:id" element={<GarmentPage />} />
             <Route path="/journal/:id" element={<JournalDetailPage />} />
           </Routes>

@@ -14,6 +14,7 @@ export default function GarmentPage() {
   const { id } = useParams();
   const [index, setIndex] = useState(0);
   const [bid, setBid] = useState('');
+  const [currency, setCurrency] = useState('€');
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -54,7 +55,7 @@ export default function GarmentPage() {
   const estim =
     typeof rawEstimate === 'string' && rawEstimate.trim().length > 0
       ? rawEstimate
-      : null;
+      : "3000";
 
   return (
     <div className="garment-detail-page">
@@ -85,21 +86,10 @@ export default function GarmentPage() {
           )}
 
           <div className="actions">
-            <button className="buy-button">Buy Now</button>
 
             <div className="bid-section">
-              <input
-                type="number"
-                placeholder={`${estim}`}
-                value={bid}
-                onChange={e => setBid(e.target.value)}
-              />
-              <button
-                style={{ marginTop: '10px' }}
-                onClick={() => alert(`Bid placed: $${bid}`)}
-              >
-                Place Bid
-              </button>
+              <div className="price">{estim}{currency}</div>
+              <button className="buy-button" style={{marginTop:'10px'}}>Buy Now</button>
               <div style={{marginTop:'10px', fontWeight:'bold'}}>
                 The Aurum Assurance:
               </div>

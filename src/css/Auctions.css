@@ -1,0 +1,127 @@
+/* Auctions.css */
+
+.auctions-page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px;
+  background: #f9f9f9;
+  align-items: center; /* center each auction-row horizontally */
+}
+.details-link {
+  text-decoration: none !important;
+}
+
+.details-link:hover {
+  text-decoration: none;
+  opacity: 0.8;       /* 80% opaque */
+  cursor: pointer;    /* show pointer when hovering */
+}
+
+
+/* Each auction is a row that’s e.g. 80% of the page width */
+.auction-row {
+  display: flex;
+  width: 80%;           /* or any fixed px value if you prefer */
+  max-width: 1000px;    /* optional max */
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Left: image container takes half of the auction-row */
+.auction-image-wrapper {
+  flex: 0 0 40%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+
+.auction-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Right: details container takes the other half */
+.auction-details {
+  flex: 0 0 50%;
+  margin-top: 15%;
+  margin-left: 5%;
+  padding: 16px;
+}
+
+.auction-datetime {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.auction-code {
+  font-size: 26px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.auction-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.auction-additional {
+  margin-bottom: 14px;
+  color: #444;
+  font-size: 24px;
+}
+
+.sessions {
+  margin-bottom: 4px;
+}
+
+.session-label {
+  font-weight: 600;
+}
+
+.session-time {
+  margin-right: 12px;
+}
+
+.location {
+  font-weight: 500;
+}
+
+.details-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #1f4fdb;
+  text-decoration: none;
+}
+
+.details-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 800px) {
+  .auction-row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .auction-image-wrapper,
+  .auction-details {
+    flex: none;
+    width: 100%;
+  }
+  .auction-image {
+    height: 200px;
+    object-fit: cover;
+  }
+}
