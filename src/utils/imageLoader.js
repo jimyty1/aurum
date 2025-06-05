@@ -3,7 +3,7 @@ const importAll = (r) => r.keys().map(r);
 export const allImages = importAll(require.context('../assets/pictures', false, /\.(png|jpe?g|webp)$/));
 export const auctions = importAll(require.context('../assets/auctions', false, /\.(png|jpe?g|webp)$/));
 export const auctionImg = importAll(require.context('../assets/auctions/auctionItems', false, /\.(png|jpe?g|webp)$/));
-
+export const profileImg = importAll(require.context('../assets/profile', false, /\.(png|jpe?g|webp)$/));
 export const previewImages = allImages.slice(2, 5);
 export const bannerImage = allImages[25];
 export const grid1Images = allImages.slice(6, 12);

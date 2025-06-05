@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import '../css/ProfilePage.css';
+import {profileImg} from "../utils/imageLoader";
 
 export default function ProfilePage() {
   const [activeTab, setActiveTab] = useState('orders');
@@ -10,13 +11,18 @@ export default function ProfilePage() {
     switch (activeTab) {
       case 'orders':
         return (
-          <div>
-            <h2>Previous Orders</h2>
-            <ul>
-              <li>Order #A1024 — Gucci coat — Delivered</li>
-              <li>Order #A1023 — Orange dress — Returned</li>
-              <li>Order #A1021 — Burberry shirt — Delivered</li>
-            </ul>
+          <div className="orders-section">
+            <div className="orders-text">
+              <h2>Previous Orders</h2>
+              <ul>
+                <li>Order #A1024 — Gucci coat — Delivered</li>
+                <li>Order #A1023 — Orange dress — Returned</li>
+                <li>Order #A1021 — Burberry shirt — Delivered</li>
+              </ul>
+            </div>
+            <div className="orders-image">
+              <img className="profileImg" src={profileImg} alt="Profile" />
+            </div>
           </div>
         );
       case 'returns':

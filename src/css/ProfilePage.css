@@ -15,6 +15,30 @@
     margin: 0;
 }
 
+.orders-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.orders-text {
+    flex: 2;
+}
+
+.orders-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profileImg {
+    height: 300px;
+    width: auto;
+    object-fit: cover;
+    margin-right: 70%;
+}
+
 .profile-nav li {
     margin-bottom: 1rem;
     cursor: pointer;
