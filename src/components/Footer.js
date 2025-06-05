@@ -24,11 +24,12 @@ export default function Footer() {
 
         {/* Middle: Links */}
         <div className="footer-links">
-          <Link to="/shop">Shop</Link>
+          <Link to="/shop"> Buy Now</Link>
           <Link to="/journal">Journal</Link>
           <Link to="/profile">Profile</Link>
           <Link to="/login">Log In</Link>
           <Link to={'about'}>About</Link>
+          <Link to='/auctions'>Auctions</Link>
         </div>
 
         {/* Right: Newsletter Sign-Up */}
