@@ -50,27 +50,27 @@
 /* Right: details container takes the other half */
 .auction-details {
   flex: 0 0 50%;
-  margin-top: 10%;
+  margin-top: 15%;
   margin-left: 5%;
   padding: 16px;
 }
 
 .auction-datetime {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 8px;
   color: var(--color-jet-black);
 }
 
 .auction-code {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--color-jet-black);
   margin-bottom: 6px;
 }
 
 .auction-title {
-  font-size: 38px;
+  font-size: 24px;
   font-weight: bold;
   width: fit-content;
   color: var(--color-jet-black);

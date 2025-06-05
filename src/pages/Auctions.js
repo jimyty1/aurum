@@ -67,7 +67,6 @@ export default function Auctions() {
                 <span className="session-label">Session 2:</span>{' '}
                 <span className="session-time">{auction.session2}</span>
               </div>
-              <div className="location">Location: {auction.location}</div>
             </div>
           </div>
         </div>

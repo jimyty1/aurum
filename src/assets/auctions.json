@@ -6,8 +6,7 @@
     "code": "AUCTION-001",
     "title": "\"From Nothing\"",
     "session1": "14:00",
-    "session2": "20:00",
-    "location": "Main Gallery, New York"
+    "session2": "20:00"
   },
   {
     "id": 2,
@@ -16,8 +15,7 @@
     "code": "AUCTION-002",
     "title": "\"Icons & Influence\"",
     "session1": "14:00",
-    "session2": "16:00",
-    "location": "East Wing, Los Angeles"
+    "session2": "16:00"
   },
   {
     "id": 3,
@@ -26,7 +24,6 @@
     "code": "AUCTION-003",
     "title": "\"Les Hivers Noirs Opera Night\"",
     "session1": "19:30",
-    "session2": "21:30",
-    "location": "West Pavilion, Chicago"
+    "session2": "21:30"
   }
 ]
