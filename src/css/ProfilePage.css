@@ -38,6 +38,30 @@
     object-fit: cover;
     margin-right: 70%;
 }
+.section-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.section-text {
+    flex: 2;
+}
+
+.section-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profileImg {
+    height: 200px;
+    width: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 
 .profile-nav li {
     margin-bottom: 1rem;
