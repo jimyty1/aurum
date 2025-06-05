@@ -27,7 +27,7 @@ export default function AuctionItems() {
   );
 
   const matchingImages = allImages.filter((img) =>
-    img.name.startsWith(`${id}.`)
+    img.name.startsWith(`${id[0]}.`)
   );
 
   return (
