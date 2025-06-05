@@ -32,7 +32,7 @@ export default function AuctionItems() {
 
   return (
     <div className="shop-page">
-      <h2>Our Buy Now Collection – Category {id}</h2>
+      <h2>Our {auctionsData[id-1]['title']} Collection – Category {id}</h2>
 
       {matchingImages.length === 0 ? (
         <p>No images found for category {id}.</p>
