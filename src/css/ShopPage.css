@@ -10,7 +10,15 @@
     margin-top: 2rem;
 }
 
+.garm-image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
 
+.garment-image:hover {
+    transform: scale(1.03);
+}
 
 .carousel-wrapper {
     width: 100%;

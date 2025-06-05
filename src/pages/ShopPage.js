@@ -47,7 +47,7 @@ export default function ShopPage() {
         {Object.entries(garments).map(([key, imgs]) =>
           <Link to={`/garment/${key}`} key={key}>
             {imgs.length === 1 ? (
-              <img src={imgs[0].src} alt={`Garment ${key}`} className="garment-image" />
+              <img src={imgs[0].src} alt={`Garment ${key}`} className="garm-image" />
             ) : (
               <Carousel images={imgs.map((i) => i.src)} />
             )}
