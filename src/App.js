@@ -14,6 +14,8 @@ import Footer from './components/Footer';
 import JournalDetailPage from "./pages/JournalDetailPage";
 import JournalPage from "./pages/JournalPage";
 import Auctions from "./pages/Auctions";
+import AuctionItems from "./pages/AuctionItems.js";
+import AuctionItem from "./pages/AuctionItem";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
             <Route path="/Journal" element={<JournalPage />} />
             <Route path="/About" element={<About />} />
             <Route path="/auctions" element={<Auctions />} />
+            <Route path="/auctionItems/:id" element={<AuctionItems />} />
+            <Route path="/auctionItem/:id" element={<AuctionItem />} />
             <Route path="/garment/:id" element={<GarmentPage />} />
             <Route path="/journal/:id" element={<JournalDetailPage />} />
           </Routes>

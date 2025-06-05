@@ -1,0 +1,46 @@
+/* AuctionItems.css */
+
+.shop-page {
+    padding: 24px;
+    background: #f9f9f9;
+}
+
+.shop-page h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.garment-grid {
+    display: grid;
+    width: 100%;
+    max-width: 1000px;    /* or whatever max width you want */
+    margin: 0 auto;       /* centers the grid container */
+    justify-content: center;  /* centers columns inside the grid */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+
+/* Each linked image container */
+.garment-link {
+    display: block;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.garment-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* The images themselves */
+.garment-image {
+    display: block;
+    width: 100%;
+    height: 500px; /* fixed height; change if you want taller/shorter */
+    object-fit: cover;
+}

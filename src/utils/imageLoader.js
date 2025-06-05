@@ -2,6 +2,7 @@ import atrium from '../assets/atrium.webp'
 const importAll = (r) => r.keys().map(r);
 export const allImages = importAll(require.context('../assets/pictures', false, /\.(png|jpe?g|webp)$/));
 export const auctions = importAll(require.context('../assets/auctions', false, /\.(png|jpe?g|webp)$/));
+export const auctionImg = importAll(require.context('../assets/auctions/auctionItems', false, /\.(png|jpe?g|webp)$/));
 
 export const previewImages = allImages.slice(2, 5);
 export const bannerImage = allImages[25];

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../css/ShopPage.css';
 import {Link} from "react-router-dom";
 
+
 // Import all images from clothing folder
 const importAll = (r) => {
   return r.keys().map((key) => ({

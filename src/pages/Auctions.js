@@ -22,7 +22,7 @@ export default function Auctions() {
     <div className="auctions-page">
       {auctions.map((auction) => (
         <Link
-          to={`/auctions/${auction.id}`}
+          to={`/auctionItems/${auction.id}`}
           className="details-link"
         >
         <div className="auction-row" key={auction.id}>

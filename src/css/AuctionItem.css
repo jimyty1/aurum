@@ -1,0 +1,125 @@
+.garment-detail-page {
+    padding: 24px;
+    background: #f9f9f9;
+    min-height: 80vh;
+}
+
+/* Flex container wrapping image + info */
+.detail-flex {
+    display: flex;
+    gap: 24px; /* space between image and info */
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Left: fixed‐width image container */
+.garment-detail-image {
+    width: 400px; /* adjust as needed */
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Fallback box for missing image */
+.no-image {
+    width: 400px;
+    height: 400px;
+    background: #eee;
+    color: #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-style: italic;
+}
+
+/* Right: info column */
+.detail-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.designer {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+    margin: 0;
+}
+
+.estimate-block,
+.starting-bid-block {
+    font-size: 18px;
+    color: #222;
+}
+
+.estimate-label,
+.starting-bid-label {
+    font-weight: 600;
+}
+
+/* Bid form styling */
+.bid-form {
+    margin-top: 24px;
+}
+
+.bid-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.bid-input-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.bid-input {
+    width: 100px;         /* adjust as desired */
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.bid-button {
+    padding: 8px 20px;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.bid-button:hover {
+    background-color: #2b6cb0;
+}
+
+/* On small screens, stack vertically */
+@media (max-width: 768px) {
+    .detail-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .garment-detail-image,
+    .no-image {
+        width: 100%;
+        max-width: 400px;
+    }
+    .detail-info {
+        width: 100%;
+    }
+}
