@@ -5,23 +5,24 @@ import '../css/AuctionItem.css';
 
 export default function AuctionItem() {
   const { id } = useParams();
-  const fullFilename = id; // e.g. "1.1.550e1221d8dd11fe7376.png"
+  const fullFilename = id;
 
-  // Extract base ID ("1.1")
   const parts = fullFilename.split('.');
   const baseIdStr = parts.length >= 2 ? `${parts[0]}.${parts[1]}` : parts[0];
   const numericId = parseFloat(baseIdStr);
 
-  // Lookup JSON entry
   const data = descriptions.find((item) => item.id === numericId) || {};
   const {
     designer = '',
     description: descText = '',
     estimate = '',
-    startingBid = ''
+    startingBid: rawBid = '',
   } = data;
 
-  // Import all images
+  const startingBid = parseFloat(
+    typeof rawBid === 'string' ? rawBid.replace(/[^\d.]/g, '') : rawBid
+  ) || 0;
+
   const importAll = (r) =>
     r.keys().map((key) => ({
       src: r(key),
@@ -35,33 +36,32 @@ export default function AuctionItem() {
     )
   );
 
-  // Find the matching image whose name starts with "baseIdStr."
   const matchingImageObj = allImages.find((img) =>
     img.name.startsWith(`${baseIdStr}.`)
   );
   const imageUrl = matchingImageObj ? matchingImageObj.src : '';
 
-  // Bid form state
-  const [bid, setBid] = useState('');
+  const [bid, setBid] = useState(startingBid);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+    setBid(startingBid); // sync if it changes
+  }, [startingBid]);
 
   const handleBidSubmit = (e) => {
     e.preventDefault();
     const amt = Number(bid);
-    if (!bid || isNaN(amt) || amt <= 0) {
-      alert('Please enter a valid bid amount.');
+    if (!bid || isNaN(amt) || amt < startingBid) {
+      alert(`Please enter a bid of at least €${startingBid}.`);
       return;
     }
     alert(`Your bid of €${amt} has been placed!`);
-    setBid('');
+    setBid(startingBid);
   };
 
   return (
     <div className="garment-detail-page">
       <div className="detail-flex">
-        {/* Image on the left */}
         {imageUrl ? (
           <img
             src={imageUrl}
@@ -78,7 +78,6 @@ export default function AuctionItem() {
           </div>
         )}
 
-        {/* Info column on the right */}
         <div className="detail-info">
           {designer && <h2 className="designer">{designer}</h2>}
           {descText && <p className="description">{descText}</p>}
@@ -91,7 +90,7 @@ export default function AuctionItem() {
           {startingBid && (
             <div className="starting-bid-block">
               <span className="starting-bid-label">STARTING BID: </span>
-              {startingBid}
+              {"€" + startingBid}
             </div>
           )}
 
@@ -103,18 +102,19 @@ export default function AuctionItem() {
               <input
                 id="bidInput"
                 type="number"
-                min="1"
+                min={startingBid}
                 step="1"
                 value={bid}
                 onChange={(e) => setBid(e.target.value)}
                 className="bid-input"
-                placeholder="Amount"
+                placeholder={startingBid}
               />
+
             </div>
-            <button type="submit" className="bid-button" style = {{marginTop:"2%"}}>
+            <button type="submit" className="bid-button" style={{ marginTop: '2%' }}>
               Place Bid
             </button>
-            <div style={{marginTop:"10px"}}>
+            <div style={{ marginTop: '10px' }}>
               The Aurum Assurance: Expert Authentication, Blockchain-Verified Provenance, White-Glove Delivery, 48-Hour Bid Withdrawal Option
             </div>
           </form>

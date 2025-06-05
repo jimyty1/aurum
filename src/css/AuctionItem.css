@@ -82,7 +82,7 @@
 }
 
 .bid-input {
-    width: 100px;         /* adjust as desired */
+    width: fit-content;         /* adjust as desired */
     padding: 8px 12px;
     font-size: 16px;
     border: 1px solid #ccc;
