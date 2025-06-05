@@ -15,7 +15,7 @@
 
 /* Left: fixed‐width image container */
 .garment-detail-image {
-    width: 400px; /* adjust as needed */
+    width: 350px; /* adjust as needed */
     height: auto;
     object-fit: cover;
     border-radius: 4px;

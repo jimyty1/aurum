@@ -114,6 +114,9 @@ export default function AuctionItem() {
             <button type="submit" className="bid-button" style = {{marginTop:"2%"}}>
               Place Bid
             </button>
+            <div style={{marginTop:"10px"}}>
+              The Aurum Assurance: Expert Authentication, Blockchain-Verified Provenance, White-Glove Delivery, 48-Hour Bid Withdrawal Option
+            </div>
           </form>
         </div>
       </div>

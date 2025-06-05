@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import '../css/AuctionItems.css';
 import { Link, useParams } from 'react-router-dom';
-import { auctionImg } from '../utils/imageLoader';
 import auctionsData from '../assets/auctions.json';
 
 export default function AuctionItems() {
@@ -11,7 +10,7 @@ export default function AuctionItems() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
-  // Build the filtered list of images for this auction ID
+  // Load all images from auctionItems folder
   const importAllImages = (r) =>
     r.keys().map((key) => ({
       src: r(key),
@@ -26,8 +25,9 @@ export default function AuctionItems() {
     )
   );
 
+  // Filter for filenames starting with "<category>."
   const matchingImages = allImages.filter((img) =>
-    img.name.startsWith(`${id[0]}.`)
+    img.name.startsWith(`${id}.`)
   );
 
   return (
@@ -38,9 +38,9 @@ export default function AuctionItems() {
         <p>No images found for category {id}.</p>
       ) : (
         <div className="garment-grid">
-          {matchingImages.map((img, idx) => (
+          {matchingImages.map((img) => (
             <Link
-              to={`/auctionItem/${id}/${idx}`}
+              to={`/auctionItem/${encodeURIComponent(img.name)}`}
               key={img.name}
               className="garment-link"
             >
